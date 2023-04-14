@@ -1,7 +1,24 @@
 import './style.css'
 
-console.log('lol')
+// this is to display clock on the page
+const currentTimeDisplay = document.querySelector('.now')
 
-const a: string = 'hi'
+setInterval(() => {
+  const currentTime = new Date()
 
-console.log(a)
+  const [year, months, day] = [
+    currentTime.getFullYear(),
+    currentTime.getMonth() + 1,
+    currentTime.getDay(),
+  ]
+
+  const [hour, minute, second] = [
+    currentTime.getHours(),
+    currentTime.getMinutes(),
+    currentTime.getSeconds(),
+  ].map((value) => (value < 10 ? value.toString().padStart(2, '0') : value))
+
+  if (currentTimeDisplay != null) {
+    currentTimeDisplay.textContent = `${year}/${months}/${day} ${hour}:${minute}:${second}`
+  }
+}, 1000)

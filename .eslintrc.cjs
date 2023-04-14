@@ -12,5 +12,7 @@ module.exports = {
     project: ['./tsconfig.json']
   },
   rules: {
+    'comma-dangle': 'off',
+    '@typescript-eslint/comma-dangle': 'off'
   }
 }
