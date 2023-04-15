@@ -6,13 +6,10 @@ const currentTimeDisplay = document.querySelector('.clock')
 setInterval(() => {
   const currentTime = new Date()
 
-  const [year, months, day] = [
+  const [year, months, day, hour, minute, second] = [
     currentTime.getFullYear(),
     currentTime.getMonth() + 1,
     currentTime.getDay(),
-  ]
-
-  const [hour, minute, second] = [
     currentTime.getHours(),
     currentTime.getMinutes(),
     currentTime.getSeconds(),
