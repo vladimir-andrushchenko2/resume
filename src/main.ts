@@ -1,7 +1,7 @@
 import './style.css'
 
 // this is to display clock on the page
-const currentTimeDisplay = document.querySelector('.now')
+const currentTimeDisplay = document.querySelector('.clock')
 
 setInterval(() => {
   const currentTime = new Date()
