@@ -3,7 +3,7 @@ import './style.css'
 // this is to display clock on the page
 const currentTimeDisplay = document.querySelector('.clock')
 
-setInterval(() => {
+function showTime(): void {
   const currentTime = new Date()
 
   const [year, months, day, hour, minute, second] = [
@@ -18,4 +18,10 @@ setInterval(() => {
   if (currentTimeDisplay != null) {
     currentTimeDisplay.textContent = `${year}/${months}/${day} ${hour}:${minute}:${second}`
   }
+}
+
+showTime()
+
+setInterval(() => {
+  showTime()
 }, 1000)
